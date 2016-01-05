@@ -1,7 +1,6 @@
 'use strict';
 
 var defaultEnvConfig = require('./default');
-var mongouri ='mongodb://tester000:codebreak@38@ds039125.mongolab.com:39125/account000';
 module.exports = {
 
   db: {

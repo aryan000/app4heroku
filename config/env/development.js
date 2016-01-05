@@ -1,13 +1,14 @@
 'use strict';
 
 var defaultEnvConfig = require('./default');
-
+var mongouri ='mongodb://tester000:codebreak@38@ds039125.mongolab.com:39125/account000';
 module.exports = {
+
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR ||  'localhost') + '/mean-dev' || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR ||  '14.139.251.107') + '/mean-dev',
-    options: {
-      user: '',
-      pass: ''
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI ||'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds039185.mongolab.com:39185'|| 'localhost') + '/mean-dev000' ,
+     options: {
+      user: 'tester000',
+      pass: 'codenotbroken'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
@@ -35,8 +36,8 @@ module.exports = {
     title: defaultEnvConfig.app.title + ' - Development Environment'
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '1557410767884307',
+    clientSecret: process.env.FACEBOOK_SECRET || '821a299e01489e954ee150787145d3ce',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
